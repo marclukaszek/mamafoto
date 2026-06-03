@@ -4,6 +4,7 @@ import { ImagePreview } from "../ImagePreview/ImagePreview";
 import type { ImageSettings } from "../../types/editor";
 import { drawEditedImage, loadImageFromUrl } from "../../utils/ImageProcessing";
 import "./ImageEditor.css";
+import logo from "../../assets/logo.png";
 
 const defaultSettings: ImageSettings = {
     brightness: 100,
@@ -150,7 +151,7 @@ export function ImageEditor() {
 
                 <img
                     className="editor-logo"
-                    src="src/assets/logo.png"
+                    src={logo}
                     alt="MamaFoto logo"
                 />
             </header>
