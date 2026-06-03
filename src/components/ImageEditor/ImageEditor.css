@@ -1,0 +1,110 @@
+.editor-page {
+    min-height: 100vh;
+    padding: clamp(12px, 2vw, 32px);
+    background: #111827;
+    color: #f9fafb;
+    overflow-x: hidden;
+}
+
+.editor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.editor-header-text {
+    min-width: 0;
+}
+
+.editor-header h1 {
+    margin: 0 0 8px;
+    font-size: clamp(24px, 3vw, 32px);
+}
+
+.editor-header p {
+    margin: 0;
+    color: #cbd5e1;
+}
+
+.editor-logo {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 18px;
+}
+
+.editor-upload {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.upload-label,
+.reset-button,
+.history-button,
+.download-button {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 16px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.upload-label {
+    background: #2563eb;
+}
+
+.upload-label input {
+    display: none;
+}
+
+.reset-button {
+    background: #374151;
+}
+
+.history-button {
+    background: #4b5563;
+}
+
+.download-button {
+    background: #16a34a;
+}
+
+.history-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+.editor-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(260px, 3fr);
+    gap: clamp(12px, 2vw, 24px);
+    align-items: start;
+    width: 100%;
+    max-width: 100%;
+}
+
+.preview-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 2vw, 24px);
+    min-width: 0;
+}
+
+@media (max-width: 1200px) {
+    .editor-layout {
+        grid-template-columns: minmax(0, 1fr) 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .editor-layout {
+        grid-template-columns: 1fr;
+    }
+}
